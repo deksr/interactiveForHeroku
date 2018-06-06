@@ -1,6 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Radium from 'radium';
+
+
+
 import './App.css';
+
+
+import SiteNavbar from '../Dumbbells/Navbar'
+import SearchBarItems from '../Components/SearchBarItems/SearchBarItems'
+import Pictures from '../Components/Pictures/Pictures';
+import SiteFooter from '../Dumbbells/Footer'
+
+
+
+
 
 class App extends Component {
   constructor(props) {
@@ -32,27 +45,21 @@ class App extends Component {
       })
   }
 
+  enteredDatahandler = (ctp) => {
+    console.log(ctp)
+    this.setState({enteredData: ctp })
+  }
+
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          {'This is '}
-          <a href="https://github.com/mars/heroku-cra-node">
-            {'create-react-app with a custom Node/Express server'}
-          </a><br/>
-        </p>
-        <p className="App-intro">
-          {this.state.fetching
-            ? 'Fetching message from API'
-            : this.state.message}
-        </p>
+        <SiteNavbar/>
+          <SearchBarItems ctpEnteredData={this.enteredDatahandler}/>
+          <Pictures ptcEnteredData={this.state.enteredData}/>
+        <SiteFooter />
       </div>
     );
   }
 }
 
-export default App;
+export default Radium(App);

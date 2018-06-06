@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100');
+
+.App-title {
+  font-size: 3.5em;
+  font-family: 'Lato', sans-serif;
+}
+
+
+.Nav-bar{
+/*	background-color: #232b2b;
+*/
+/*	background-color: #fffada;
+*/
+	background-color: pink;
+
+}
+
+.Burger-button, .Burger-button:hover, .Burger-button:active, .Burger-button:visited, .Burger-button:hover {
+	text-decoration: none; 
+	border: none;
+}
