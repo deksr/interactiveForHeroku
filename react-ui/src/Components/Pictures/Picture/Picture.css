@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100');
+
+
+
+.buttonStyle{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-left: 10px;  
+  border: 1px solid #F5F5F5;
+
+}
+
+.buttonStyle:hover{
+	border: none;
+}
+
+
+
+
+.cardTextStyle {
+  font-family: 'Lato', sans-serif;
+  margin-right: 10px;
+
+}
+
+a:link {
+  color: grey;
+}
+
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
-import logo from  '../pantone.svg';
+// import logo from  '../pantone.svg';
+// import logo from '../cute-giraffe.svg';
 import './Navbar.css';
 
 class SiteNavbar extends Component {
@@ -24,7 +25,7 @@ class SiteNavbar extends Component {
     return (
       <div>
         <Navbar className="Nav-bar" color="faded" light>
-          <NavbarBrand className="mr-auto App-title" href="/"  ><img src={logo} className="logo" alt="mainlogo" />PicturePaint</NavbarBrand>
+          <NavbarBrand className="mr-auto App-title" href="/"  >TalentPick</NavbarBrand>
           <NavbarToggler className="mr-2 Burger-button" onClick={this.toggleNavbar} />
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
@@ -32,7 +33,7 @@ class SiteNavbar extends Component {
                 <NavLink href="/components/">About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#">Sign In</NavLink>
+                <NavLink href="#">Home</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

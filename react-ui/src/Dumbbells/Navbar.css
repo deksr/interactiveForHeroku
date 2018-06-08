@@ -1,19 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100');
+@import url('https://fonts.googleapis.com/css?family=Raleway+Dots');
+
 
 .App-title {
-  font-size: 3.5em;
-  font-family: 'Lato', sans-serif;
+  font-size: 3em;
+/*  font-family: 'Lato', sans-serif;*/
+font-family: 'Raleway Dots', cursive;
+
 }
 
 
 .Nav-bar{
-/*	background-color: #232b2b;
-*/
-/*	background-color: #fffada;
-*/
-	background-color: pink;
-
+	background-color: #DCDCDC;
 }
+
+
 
 .Burger-button, .Burger-button:hover, .Burger-button:active, .Burger-button:visited, .Burger-button:hover {
 	text-decoration: none; 

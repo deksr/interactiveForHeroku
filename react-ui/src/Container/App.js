@@ -8,6 +8,7 @@ import './App.css';
 
 import SiteNavbar from '../Dumbbells/Navbar'
 import SearchBarItems from '../Components/SearchBarItems/SearchBarItems'
+import NoResultsFound from '../Components/Pictures/Picture/NoResultsFound';
 import Pictures from '../Components/Pictures/Pictures';
 import SiteFooter from '../Dumbbells/Footer'
 
@@ -22,6 +23,10 @@ class App extends Component {
       message: null,
       fetching: true
     };
+  }
+
+  componentWillMount() {
+    console.log("from app compnent will mont")
   }
 
   componentDidMount() {
@@ -51,10 +56,12 @@ class App extends Component {
   }
 
   render() {
+
     return (
       <div className="App">
         <SiteNavbar/>
           <SearchBarItems ctpEnteredData={this.enteredDatahandler}/>
+          <NoResultsFound />
           <Pictures ptcEnteredData={this.state.enteredData}/>
         <SiteFooter />
       </div>

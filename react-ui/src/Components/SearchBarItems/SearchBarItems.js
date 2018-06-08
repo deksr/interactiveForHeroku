@@ -22,38 +22,11 @@ class SearchBarItems extends Component {
 
 
 
-  inputHandler = () => {
-		// console.log(this.search.value);
-		const unsplash = new Unsplash({
-		  applicationId: process.env.REACT_APP_UNSPLASH_APPLICATION_KEY,
-		  secret: process.env.REACT_APP_UNSPLASH_API_KEY,
-		  callbackUrl: "http://localhost:3000/"
-		});
-
-
-		unsplash.search.photos(this.search.value, 1, 30)
-		.then(toJson)
-		.then(json => {
-			// console.log(json.results)
-		  this.setState({ searchImageData: json.results });
-		  
-		  let searchImage = this.state.searchImageData;
-
-
-		  searchImage.map(function(num) {
-        return <p> {num.title} </p>
-      });
-
-
-		});
-  }
-
-
   enterKeyHandler = (event) => {
 
     if (event.key === 'Enter'){
     	event.preventDefault();	
-    	// console.log(this.search.value)
+    	console.log(this.search.value)
 
     	const unsplash = new Unsplash({
 			  applicationId: process.env.REACT_APP_UNSPLASH_APPLICATION_KEY,
@@ -62,11 +35,17 @@ class SearchBarItems extends Component {
 		  });
 
 
-		   unsplash.search.collections(this.search.value, 3, 30)
+		   unsplash.search.collections(this.search.value, 1, 30)
 			.then(toJson)
 			.then(json => {
-				// console.log(json.results)
-				this.props.ctpEnteredData(json.results);            
+				console.log(json.results)
+				if(json.results === []) {
+					console.log("no data available");
+					this.props.ctpEnteredData("no data available")
+				}
+				else{
+					this.props.ctpEnteredData(json.results);  
+				}
 
 		  });
 
