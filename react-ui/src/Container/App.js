@@ -1,35 +1,49 @@
 import React, { Component } from 'react';
+
+
 import Radium from 'radium';
-
-
-
-import './App.css';
+import Unsplash, { toJson } from 'unsplash-js';
 
 
 import SiteNavbar from '../Dumbbells/Navbar'
 import SearchBarItems from '../Components/SearchBarItems/SearchBarItems'
 import NoResultsFound from '../Components/Pictures/Picture/NoResultsFound';
 import Pictures from '../Components/Pictures/Pictures';
-import SiteFooter from '../Dumbbells/Footer'
+// import SiteFooter from '../Dumbbells/Footer'
+
+
+import './App.css';
+
+
+
 
 
 
 
 
 class App extends Component {
+  
   constructor(props) {
     super(props);
     this.state = {
       message: null,
-      fetching: true
+      fetching: true,
+      uisSearchBarItems: true,
+      uisNoResultsFound: false,
+      uisPictures: true,
+      dsPictures: []
     };
   }
 
+
   componentWillMount() {
-    console.log("from app compnent will mont")
+    console.log("from app compnent will mount")
   }
 
+
   componentDidMount() {
+
+    // *********fetch node express********** 
     fetch('/api')
       .then(response => {
         if (!response.ok) {
@@ -48,12 +62,67 @@ class App extends Component {
           fetching: false
         });
       })
+    // *********unsplash api*****************
+
+
+    const unsplash = new Unsplash({
+      applicationId: process.env.REACT_APP_UNSPLASH_APPLICATION_KEY,
+      secret: process.env.REACT_APP_UNSPLASH_API_KEY,
+      callbackUrl: "http://localhost:3000/"
+      // callbackUrl: "https://peaceful-brushlands-50904.herokuapp.com/"
+    });
+
+
+    unsplash.search.photos("ball", 1, 60)
+      .then(toJson)
+      .then(json => {
+      console.log(json.results);
+        this.setState({ dsPictures:json.results });
+      });
+
   }
+
+
+
+
+
 
   enteredDatahandler = (ctp) => {
     console.log(ctp)
-    this.setState({enteredData: ctp })
+
+    const unsplash = new Unsplash({
+      applicationId: process.env.REACT_APP_UNSPLASH_APPLICATION_KEY,
+      secret: process.env.REACT_APP_UNSPLASH_API_KEY,
+      callbackUrl: "http://localhost:3000/"
+      // callbackUrl: "https://peaceful-brushlands-50904.herokuapp.com/"
+    });
+
+
+    unsplash.search.photos(ctp, 1, 60)
+    .then(toJson)
+    .then(json => {
+      console.log(json.results);
+      this.setState({ dsPictures:json.results });
+
+
+      // ********conditional rendering************
+
+      if(this.state.dsPictures.length === 0){
+        console.log("no data present")
+      
+          this.setState({uisNoResultsFound: true})
+          // this.setState({uisPictures: false})
+      }
+      else{
+        console.log("data is present")
+        this.setState({uisNoResultsFound: false})
+        // this.setState({uisPictures: true})    
+      }
+    });
   }
+
+
+
 
   render() {
 
@@ -61,9 +130,10 @@ class App extends Component {
       <div className="App">
         <SiteNavbar/>
           <SearchBarItems ctpEnteredData={this.enteredDatahandler}/>
-          <NoResultsFound />
-          <Pictures ptcEnteredData={this.state.enteredData}/>
-        <SiteFooter />
+
+          { this.state.uisNoResultsFound ?  <NoResultsFound /> : null}
+          
+          <Pictures ptcEnteredData={this.state.dsPictures}/>
       </div>
     );
   }
