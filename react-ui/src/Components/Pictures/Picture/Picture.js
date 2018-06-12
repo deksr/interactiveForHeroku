@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import Radium from 'radium';
+
+
 import Modal from 'react-responsive-modal';
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle} from 'reactstrap';
 import FaUser from 'react-icons/lib/fa/user';
@@ -13,11 +16,11 @@ import './Picture.css';
 
 
 //********* styles **********
-// const textStyle = {
-//   ':hover': {
-//     backgroundColor: 'pink'
-//   }
-// }
+const textStyle = {
+  ':hover': {
+    backgroundColor: 'pink'
+  }
+}
 
 const cardStyle = {
   backgroundColor: '#F5F5F5',
@@ -94,4 +97,4 @@ class Picture extends Component {
 
 
 
-export default Picture;
+export default Radium(Picture);

@@ -1,9 +1,31 @@
 import React, { Component } from 'react';
+import { NavLink } from "react-router-dom";
+import Radium from 'radium';
 
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+
+
+
+
+
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
 // import logo from  '../pantone.svg';
 // import logo from '../cute-giraffe.svg';
 import './Navbar.css';
+
+
+
+var linkStyle = {
+  textDecoration: 'none',
+  ':hover': {
+    backgroundColor: 'white'
+  }
+};
+
+
+
+
+
+
 
 class SiteNavbar extends Component {
   
@@ -21,23 +43,33 @@ class SiteNavbar extends Component {
       collapsed: !this.state.collapsed
     });
   }
+
+
+
+
   render() {
     return (
       <div>
+
         <Navbar className="Nav-bar" color="faded" light>
-          <NavbarBrand className="mr-auto App-title" href="/"  >TalentPick</NavbarBrand>
+
+          <NavbarBrand className="mr-auto App-title" href="/">TalentPick</NavbarBrand>
+
           <NavbarToggler className="mr-2 Burger-button" onClick={this.toggleNavbar} />
+
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
-              <NavItem>
-                <NavLink href="/components/">About</NavLink>
+              <NavItem className="navItem">
+                <NavLink to="/about" className="navLinks" style={linkStyle}>About</NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink href="#">Home</NavLink>
+              <NavItem className="navItem">
+                <NavLink to= "/" className="navLinks" style={linkStyle}>Home</NavLink>
               </NavItem>
             </Nav>
-          </Collapse>
+          </Collapse> 
+
         </Navbar>
+
       </div>
     );
   }
@@ -48,6 +80,8 @@ class SiteNavbar extends Component {
 
 
 export default SiteNavbar
+
+
 
 
 

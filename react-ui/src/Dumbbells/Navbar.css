@@ -15,8 +15,29 @@ font-family: 'Raleway Dots', cursive;
 }
 
 
+.navItem{
+	background-color: #DCDCDC;
+/*	border-bottom: 1px solid white;
+*/}
+
+
+.navLinks{
+	font-family: 'Lato', sans-serif;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+
+
+.navItem:hover {
+/*	background-color: #F0F0F0;
+*/	
+}
+
 
 .Burger-button, .Burger-button:hover, .Burger-button:active, .Burger-button:visited, .Burger-button:hover {
 	text-decoration: none; 
 	border: none;
+	border-bottom: 1px solid #DCDCDC;
 }
