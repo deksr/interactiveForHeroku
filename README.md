@@ -1,5 +1,5 @@
 # interactiveForHeroku
 
-npm install
-cd react-ui
-npm start
+npm install <br>
+cd react-ui <br>
+npm start <br>
