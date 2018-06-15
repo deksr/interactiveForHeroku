@@ -71,7 +71,7 @@ class MainPage extends Component {
     });
 
 
-    unsplash.search.photos("ball", 1, 60)
+    unsplash.search.photos("pastel", 1, 60)
       .then(toJson)
       .then(json => {
       console.log(json.results);

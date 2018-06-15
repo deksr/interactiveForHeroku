@@ -51,8 +51,6 @@ class Pictures extends Component {
     return (
       <div>
       <Container>
-        <p> your searched for: </p>
-
         <br/> <br/>
         <CardColumns>
           {listItemsPictures}  
