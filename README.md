@@ -7,5 +7,4 @@ cd react-ui <br>
 cd src <br>
 npm start <br>
 
-![Alt text](/interactiveForHeroku/react-ui/public/Images/ezgif-5-9f68cb5dd1.gif raw=true "Optional Title")
-
+![ezgif-5-9f68cb5dd1](https://user-images.githubusercontent.com/11238271/41480286-f89ce4b2-709b-11e8-9c7e-a0a44879e1f5.gif)
