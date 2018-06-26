@@ -3,10 +3,8 @@
 
 
 .App-title {
-  font-size: 3em;
-/*  font-family: 'Lato', sans-serif;*/
-font-family: 'Raleway Dots', cursive;
-
+	font-size: 3em;
+	font-family: 'Raleway Dots', cursive;
 }
 
 
@@ -17,8 +15,7 @@ font-family: 'Raleway Dots', cursive;
 
 .navItem{
 	background-color: #DCDCDC;
-/*	border-bottom: 1px solid white;
-*/}
+}
 
 
 .navLinks{
@@ -26,13 +23,6 @@ font-family: 'Raleway Dots', cursive;
 	color: white;
 	text-decoration: none;
 	font-size: 20px;
-}
-
-
-
-.navItem:hover {
-/*	background-color: #F0F0F0;
-*/	
 }
 
 

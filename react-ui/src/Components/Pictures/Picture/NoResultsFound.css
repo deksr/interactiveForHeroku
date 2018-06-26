@@ -1,26 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100');
 
 
-
-
 .noResultText{
 	font-family: 'Lato', sans-serif;
 	color: green;
 }
 
 
+
+/*animation*/
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% {  transform: rotate(359deg); }
+	0% { transform: rotate(0deg); }
+	100% {  transform: rotate(359deg); }
 }
 
 .robotSays {
-    animation: spin 20s linear infinite;
-    width: 200px;
-    margin-top: 100px;
-
+	animation: spin 20s linear infinite;
+	width: 200px;
+	margin-top: 100px;
 }
-
-
-
-

@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100');
 
-
 .cardstyleHover:hover{
   -webkit-box-shadow: 0 10px 16px -6px #777;
   -moz-box-shadow: 0 10px 16px -6px #777;
@@ -9,7 +8,8 @@
 
 }
 
-/*********** unsplash hover effect ********/
+
+/*********** unsplash hover effect start ********/
 .unsplash-hover-container{
   position: relative;
 }
@@ -31,16 +31,15 @@
 
 }
 
-
 .unsplash-hover-container:hover .unsplash-hover{
   opacity: 1;
 }
 
 
-/*********** unsplash hover effect ********/
+/*********** unsplash hover effect end ********/
 
 
 .my-modal {
-    width: 90vw;
-    max-width: 90vw;
+  width: 90vw;
+  max-width: 90vw;
 } 
