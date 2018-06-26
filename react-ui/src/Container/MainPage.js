@@ -29,6 +29,7 @@ class MainPage extends Component {
 
 
   componentDidMount() {
+    
     // *********fetch node express********** 
     fetch('/api')
     .then(response => {
@@ -78,7 +79,6 @@ class MainPage extends Component {
       // callbackUrl: "https://peaceful-brushlands-50904.herokuapp.com/"
     });
 
-
     unsplash.search.photos(ctp, 1, 60)
     .then(toJson)
     .then(json => {
@@ -87,29 +87,26 @@ class MainPage extends Component {
       // ********conditional rendering************
 
       if(this.state.dsPictures.length === 0){
-        console.log("no data present")
-
         this.setState({uisNoResultsFound: true})
           // this.setState({uisPictures: false})
         }
         else{
-          console.log("data is present")
           this.setState({uisNoResultsFound: false})
         // this.setState({uisPictures: true})    
       }
     });
   }
 
-
   render() {
     return (
       <div className="App">
-      <SearchBarItems ctpEnteredData={this.enteredDatahandler}/>
-      { this.state.uisNoResultsFound ?  <NoResultsFound /> : null}
-      <Pictures ptcEnteredData={this.state.dsPictures}/>
+        <SearchBarItems ctpEnteredData={this.enteredDatahandler}/>
+        { this.state.uisNoResultsFound ?  <NoResultsFound /> : null}
+        <Pictures ptcEnteredData={this.state.dsPictures}/>
       </div>
-      );
+    );
   }
 }
+
 
 export default MainPage;

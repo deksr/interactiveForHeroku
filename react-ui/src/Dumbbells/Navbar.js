@@ -18,7 +18,7 @@ var linkStyle = {
 
 
 class SiteNavbar extends Component {
-  
+
   constructor(props) {
     super(props);
 
@@ -34,28 +34,25 @@ class SiteNavbar extends Component {
     });
   }
 
-
-
-
   render() {
     return (
       <div>
-      <Navbar className="Nav-bar" color="faded" light>
-      <NavbarBrand className="mr-auto App-title" href="/">TalentPick</NavbarBrand>
-      <NavbarToggler className="mr-2 Burger-button" onClick={this.toggleNavbar} />
-      <Collapse isOpen={!this.state.collapsed} navbar>
-      <Nav navbar>
-      <NavItem className="navItem">
-      <NavLink to="/about" className="navLinks" style={linkStyle}>About</NavLink>
-      </NavItem>
-      <NavItem className="navItem">
-      <NavLink to= "/" className="navLinks" style={linkStyle}>Home</NavLink>
-      </NavItem>
-      </Nav>
-      </Collapse> 
-      </Navbar>
+        <Navbar className="Nav-bar" color="faded" light>
+          <NavbarBrand className="mr-auto App-title" href="/">TalentPick</NavbarBrand>
+          <NavbarToggler className="mr-2 Burger-button" onClick={this.toggleNavbar} />
+          <Collapse isOpen={!this.state.collapsed} navbar>
+            <Nav navbar>
+              <NavItem className="navItem">
+                <NavLink to="/about" className="navLinks" style={linkStyle}>About</NavLink>
+              </NavItem>
+              <NavItem className="navItem">
+                <NavLink to= "/" className="navLinks" style={linkStyle}>Home</NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse> 
+        </Navbar>
       </div>
-      );
+    );
   }
 }
 

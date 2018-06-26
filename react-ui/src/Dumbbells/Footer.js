@@ -14,10 +14,8 @@ const footerStyle = {
 class SiteFooter extends Component {
   render(){
     return (
-      <div>
       <div style={footerStyle}> Built With React </div>
-      </div>
-      )
+    )
   }
 }
 

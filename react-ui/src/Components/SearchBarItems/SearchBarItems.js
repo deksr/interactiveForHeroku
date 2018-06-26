@@ -17,18 +17,18 @@ class SearchBarItems extends Component {
 	render() {
 		return (
 			<div>
-			<form autoComplete="off" ref={(el) => this.myFormRef = el}>
-			<FaSearch /> <input 
-			type="text" 
-			name="search" 
-			placeholder="Search.." 
-			ref={input => this.search = input}
-			onChange={this.inputHandler} 
-			onKeyPress={this.enterKeyHandler}/>
-			<p></p>
-			</form>
+				<form autoComplete="off" ref={(el) => this.myFormRef = el}>
+					<FaSearch />
+					<input 
+					type="text" 
+					name="search" 
+					placeholder="Search.." 
+					ref={input => this.search = input}
+					onChange={this.inputHandler} 
+					onKeyPress={this.enterKeyHandler}/>
+				</form>
 			</div>  
-			)
+		)
 	}
 }
 

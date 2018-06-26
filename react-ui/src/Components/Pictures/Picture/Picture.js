@@ -8,8 +8,6 @@ import './Picture.css';
 
 
 
-
-
 //********* styles **********
 const textStyle = {
   ':hover': {
@@ -23,8 +21,6 @@ const cardStyle = {
   flex: 1
 }
 //****************************
-
-
 
 
 
@@ -48,26 +44,24 @@ class Picture extends Component {
     const { open } = this.state;
     return (
       <div>
-      <Card style={cardStyle} className="cardstyleHover">
-      <div className="unsplash-hover-container"> 
-      <CardImg top width="100%" src={this.props.pictureobj.small} onClick={this.onOpenModal}/>
-      <div className="unsplash-hover">Image Source: Unsplash</div> 
-      </div>           
+        <Card style={cardStyle} className="cardstyleHover">
+          <div className="unsplash-hover-container"> 
+            <CardImg top width="100%" src={this.props.pictureobj.small} onClick={this.onOpenModal}/>
+            <div className="unsplash-hover">Image Source: Unsplash</div> 
+          </div>           
 
-      <CardBody>
-      <CardTitle> </CardTitle>
-      <CardSubtitle> </CardSubtitle>
-      <CardText className="cardTextStyle">
-      {this.props.pictureUser.name}
-      <button className="buttonStyle"  link="green">< a href={this.props.pictureLink.html} target="_blank"> <FaUser /> </a></button>
-      <button className="buttonStyle"><a href={this.props.pictureLink.download} target="_blank"><FaFolderOpen /></a></button> <br/>
-      <Modal size="sm" open={open} onClose={this.onCloseModal} center>
-      <CardImg size="sm" src={this.props.pictureobj.small} /> 
-      </Modal>
-      </CardText> 
-      </CardBody>
-      </Card>
-      <br/> <br/>
+          <CardBody>
+            <CardText className="cardTextStyle">
+              {this.props.pictureUser.name}
+              <button className="buttonStyle"  link="green">< a href={this.props.pictureLink.html} target="_blank"> <FaUser /> </a></button>
+              <button className="buttonStyle"><a href={this.props.pictureLink.download} target="_blank"><FaFolderOpen /></a></button> <br/>
+              <Modal size="sm" open={open} onClose={this.onCloseModal} center>
+                <CardImg size="sm" src={this.props.pictureobj.small} /> 
+              </Modal>
+            </CardText> 
+          </CardBody>
+        </Card>
+        <br/><br/>
       </div>
     );
   }
