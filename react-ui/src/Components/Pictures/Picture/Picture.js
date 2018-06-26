@@ -22,7 +22,6 @@ const cardStyle = {
   border: 'none',
   flex: 1
 }
-
 //****************************
 
 
@@ -47,7 +46,6 @@ class Picture extends Component {
 
   render() {
     const { open } = this.state;
-
     return (
       <div>
       <Card style={cardStyle} className="cardstyleHover">

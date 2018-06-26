@@ -6,10 +6,7 @@ import './Pictures.css';
 
 
 class Pictures extends Component {
-
-
   render() {
-
     const pictures =  this.props.ptcEnteredData;
     let listItemsPictures;
     listItemsPictures = pictures.map((picture, index) => {
@@ -17,7 +14,6 @@ class Pictures extends Component {
         <Picture key={picture.id} pictureobj={picture.urls} pictureUser={picture.user} pictureLink={picture.links}/>
         )
     })
-
 
     return (
       <div>
