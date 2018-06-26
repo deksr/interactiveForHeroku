@@ -2,8 +2,11 @@
 
 A search component built with react and unsplash Api <br>
 
+
+nvm use 8.0<br>
 npm install <br>
 cd react-ui <br>
+npm install <br>
 cd src <br>
 npm start <br>
 
