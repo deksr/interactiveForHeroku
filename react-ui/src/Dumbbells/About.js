@@ -5,7 +5,7 @@ import './About.css';
 const About = () => {
 	return (
 		<div>
-			<p className="aboutPageText"> This is an app for photgraphers to show off their talent.</p>
+			<p className="aboutPageText">This is an app for photgraphers to show off their talent.</p>
 		</div>
 	)
 }

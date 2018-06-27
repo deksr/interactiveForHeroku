@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Radium from 'radium';
 import Modal from 'react-responsive-modal';
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle} from 'reactstrap';
+import { Card, CardImg, CardText, CardBody} from 'reactstrap';
 import FaUser from 'react-icons/lib/fa/user';
 import FaFolderOpen from 'react-icons/lib/fa/folder-open'
 import './Picture.css';
@@ -9,11 +9,11 @@ import './Picture.css';
 
 
 //********* styles **********
-const textStyle = {
-  ':hover': {
-    backgroundColor: 'pink'
-  }
-}
+// const textStyle = {
+//   ':hover': {
+//     backgroundColor: 'pink'
+//   }
+// } // notes: Use RADIUM for hover like this
 
 const cardStyle = {
   backgroundColor: '#F5F5F5',

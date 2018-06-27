@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import Radium from 'radium';
 import Unsplash, { toJson } from 'unsplash-js';
-import { BrowserRouter, Route } from "react-router-dom";
-import SiteNavbar from '../Dumbbells/Navbar'
 import SearchBarItems from '../Components/SearchBarItems/SearchBarItems'
 import NoResultsFound from '../Components/Pictures/Picture/NoResultsFound';
 import Pictures from '../Components/Pictures/Pictures';
