@@ -3,17 +3,12 @@ import Radium from 'radium';
 import Modal from 'react-responsive-modal';
 import { Card, CardImg, CardText, CardBody} from 'reactstrap';
 import FaUser from 'react-icons/lib/fa/user';
-import FaFolderOpen from 'react-icons/lib/fa/folder-open'
+import FaFolderOpen from 'react-icons/lib/fa/folder-open';
 import './Picture.css';
 
 
 
-//********* styles **********
-// const textStyle = {
-//   ':hover': {
-//     backgroundColor: 'pink'
-//   }
-// } // notes: Use RADIUM for hover like this
+//********* styles *********
 
 const cardStyle = {
   backgroundColor: '#F5F5F5',
@@ -54,7 +49,7 @@ class Picture extends Component {
             <CardText className="cardTextStyle">
               {this.props.pictureUser.name}
               <button className="buttonStyle"  link="green">< a href={this.props.pictureLink.html} target="_blank"> <FaUser /> </a></button>
-              <button className="buttonStyle"><a href={this.props.pictureLink.download} target="_blank"><FaFolderOpen /></a></button> <br/>
+              <button className="buttonStyle"><a href={this.props.pictureLink.download} target="_blank"><FaFolderOpen /></a></button><br/>
               <Modal size="sm" open={open} onClose={this.onCloseModal} center>
                 <CardImg size="sm" src={this.props.pictureobj.small} /> 
               </Modal>

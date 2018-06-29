@@ -5,7 +5,7 @@ import './Navbar.css';
 
 
 //********* styles **********
-var linkStyle = {
+let linkStyle = {
   textDecoration: 'none',
   ':hover': {
     backgroundColor: 'white'

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Unsplash, { toJson } from 'unsplash-js';
-import SearchBarItems from '../Components/SearchBarItems/SearchBarItems'
+import SearchBarItems from '../Components/SearchBarItems/SearchBarItems';
 import NoResultsFound from '../Components/Pictures/Picture/NoResultsFound';
 import Pictures from '../Components/Pictures/Pictures';
 import './App.css';
@@ -52,7 +52,6 @@ class MainPage extends Component {
       applicationId: process.env.REACT_APP_UNSPLASH_APPLICATION_KEY,
       secret: process.env.REACT_APP_UNSPLASH_API_KEY,
       callbackUrl: "http://localhost:3000/"
-      // callbackUrl: "https://peaceful-brushlands-50904.herokuapp.com/"
     });
 
 
@@ -73,7 +72,6 @@ class MainPage extends Component {
       applicationId: process.env.REACT_APP_UNSPLASH_APPLICATION_KEY,
       secret: process.env.REACT_APP_UNSPLASH_API_KEY,
       callbackUrl: "http://localhost:3000/"
-      // callbackUrl: "https://peaceful-brushlands-50904.herokuapp.com/"
     });
 
     unsplash.search.photos(ctp, 1, 60)
@@ -82,14 +80,11 @@ class MainPage extends Component {
       console.log(json.results);
       this.setState({ dsPictures:json.results });
       // ********conditional rendering************
-
       if(this.state.dsPictures.length === 0){
         this.setState({uisNoResultsFound: true})
-          // this.setState({uisPictures: false})
         }
         else{
           this.setState({uisNoResultsFound: false})
-        // this.setState({uisPictures: true})    
       }
     });
   }

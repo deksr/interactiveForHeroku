@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import Radium from 'radium';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import SiteNavbar from '../Dumbbells/Navbar'
-import MainPage from './MainPage'
-import About from '../Dumbbells/About'
+import SiteNavbar from '../Components/Navbar/Navbar';
+import MainPage from './MainPage';
+import About from '../Components/About/About';
 import './App.css';
+
 
 
 class App extends Component { 
