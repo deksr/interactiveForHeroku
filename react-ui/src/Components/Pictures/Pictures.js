@@ -31,33 +31,4 @@ class Pictures extends Component {
 }
 
 
-
-// class Pictures extends Component {
-//   render(){
-
-//     const pictures =  this.props.ptcEnteredData;
-    
-    
-//     let listItemsPictures = pictures.map((picture, index) => {
-//       return (
-//         <Picture key={picture.id} pictureobj={picture.urls} pictureUser={picture.user} pictureLink={picture.links}/>
-//       )
-//     })
-
-//     return (
-//       <div>
-//         <Container>
-//           <br/><br/>
-//           <CardColumns>
-//             {listItemsPictures}  
-//           </CardColumns>
-//         </Container>
-//       </div>
-//     )
-//   }
-// }
-
-
-
-
 export default Radium(Pictures)
